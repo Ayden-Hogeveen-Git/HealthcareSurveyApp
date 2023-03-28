@@ -4,8 +4,6 @@
 //
 //  Created by Ayden Hogeveen on 2023-03-24.
 //
-// TODO: design updates
-// TODO: case 11 -- general text feedback
 // TODO: back button
 // TODO: Database management
 //
@@ -32,9 +30,13 @@ struct ContentView: View {
             switch (self.questionNum) {
             case -1:
                 VStack {
-                    Text("Healthcare Survey App")
+                    Text("HEART")
                         .font(.largeTitle)
                         .padding()
+                    Text("Healthcare Empowerment Assistance and Resilience Tool")
+                        .font(.title2)
+                        .padding()
+                    
                     
                     Button(action: {
                         self.questionNum = 0
