@@ -6,6 +6,9 @@
 //
 // TODO: back button
 // TODO: Database management
+// TODO: Background
+//
+//.background(LinearGradient(gradient: (Gradient(colors: [Color.blue, Color.red])), startPoint: .top, endPoint: .bottom))
 //
 
 import SwiftUI
@@ -17,13 +20,14 @@ struct ContentView: View {
     let screenHeight = UIScreen.main.bounds.height
     
     // Question and answer arrays
-    var questionArr = ["Unit is effectively staffed", "Support staff available", "Patient LOAD on unit", "Appropriate acuity level", "Resources avaiable for the shift", "Break times were observed", "Scheduling was collaborative", "I am heard", "PTO vacation approval", "Safety concerns", "What recommendations do you have to improve patient care during your shift? Please provide specific details and examples."]
+    var questionArr = ["Is the unit effectively staffed?", "Are enough support staff (HCA) available for the shift?", "What is the patient load on the unit?", "Is the acuity level appropriate?", "Are all necessary resources available for the shift?", "Are full break times observed?", "Was scheduling collaborative?", "Are you well compensated for the work you do?", "Are PTO and vacation time approvals fair?", "Are there safety concerns that need to be addressed?", "What recommendations do you have to improve patient care during your shift? Please provide specific details and examples."]
     
     let multAns = ["N/a", "Yes", "Most of the time", "Neutral", "Sometimes", "Never"]
         
     // Button vars
     @State private var questionNum: Int = -1
     @State private var answerArr = Array<String>(repeating:"", count: 11)
+    
     
     var body: some View {
         VStack {
@@ -74,7 +78,7 @@ struct ContentView: View {
                     Button(action: {
                         self.questionNum += 1
                     }, label: {
-                        Text("Submit")
+                        Text("Next Question")
                     })
 //                    .position(x: 110, y: screenHeight / 1.9)
                     .padding()
@@ -117,7 +121,7 @@ struct ContentView: View {
                         self.questionNum = -1
                         answerArr = Array<String>(repeating:"", count: 11)
                     }, label: {
-                        Text("Save Answers")
+                        Text("Save and Submit Answers")
                     })
                     
                     
