@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HEART Healthcare Survey</title>
+        
+        <!-- Javascript Links -->
+        <script src="js/questionList.js"></script>
+        <script src="js/darkModeHandler.js"></script>
+        <!-- Css Links -->
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body class="survey-body">
+        <!-- Title and Subtitle for Page -->
+        <h1 id="HEARTtitle" class="title">HEART Healthcare Survey</h1>
+        <p id="HEARTsubtitle" class="description">Healthcare Empowerment Assistance and Resilience Tool</p>
+        
+        <!-- Survey Description -->
+
+        <!-- Survey Form -->
+        <form action="/submit-form" method="post">
+
+            <!-- Q1: Staffing -->
+            <label for="answer1-select">Is the unit effectively staffed?</label>
+            <select id="answer1-select"></select>
+            <br><br>
+
+            <!-- Q2: Support -->
+            <label for="answer2-select">Is there enough support staff (HCA) available for the shift?</label>
+            <select id="answer2-select"></select>
+            <br><br>
+
+            <!-- Q3: Patient Load -->
+            <label for="answer3-select">What is the patient load on the unit?</label>
+            <select id="answer3-select"></select>
+            <br><br>
+
+            <!-- Q4: Acuity Level -->
+            <label for="answer4-select">Is the acuity level appropriate? </label>
+            <select id="answer4-select"></select>
+            <br><br>
+
+            <!-- Q5: Resources -->
+            <label for="answer5-select">Are all necessary resources available for the shift? </label>
+            <select id="answer5-select"></select>
+            <br><br>
+
+            <!-- Q6: Break Times -->
+            <label for="answer6-select">Are full break times observed? </label>
+            <select id="answer6-select"></select>
+            <br><br>
+            
+            <!-- Q7: Scheduling -->
+            <label for="answer7-select">Was scheduling collaborative? </label>
+            <select id="answer7-select"></select>
+            <br><br>
+            
+            <!-- Q8: Resources -->
+            <label for="answer8-select">Are you well compensated for the work you do? </label>
+            <select id="answer8-select"></select>
+            <br><br>
+
+            <!-- Q9: PTO and Vacation -->
+            <label for="answer9-select">Are PTO and vacation time approvals fair? </label>
+            <select id="answer9-select"></select>
+            <br><br>
+            
+            <!-- Q10: Safety Concerns -->
+            <label for="answer10-select">Are there any safety concerns that need to be addressed? </label>
+            <select id="answer10-select"></select>
+            <br><br>
+            
+            <!-- Feedback -->
+            <label for="feedback">Feedback:</label><br>
+            <textarea id="feedback" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Call fill function -->
+        <script>
+            createAnswerList("answer1-select");
+            createAnswerList("answer2-select");
+            createAnswerList("answer3-select");
+            createAnswerList("answer4-select");
+            createAnswerList("answer5-select");
+            createAnswerList("answer6-select");
+            createAnswerList("answer7-select");
+            createAnswerList("answer8-select");
+            createAnswerList("answer9-select");
+            createAnswerList("answer10-select");
+        </script>
+
+    </body>
+    <footer>
+        <label class="dark-mode-label">
+            <input type="checkbox" id="dark-mode-toggle" class="dark-mode-switch" onclick="darkModeToggle()">
+            <span class="dark-mode-slider"></span>
+        </label>
+    </footer>
+</html>
